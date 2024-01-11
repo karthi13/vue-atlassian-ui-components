@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { cn } from "../../utils/utils";
 import { computed } from "vue";
 type ButtonAppearance = "default" | "primary" | "warning" | "danger" | "link" | "subtle" | "subtle-link";
 type ButtonSize = "sm" | "md" | "lg";
@@ -35,6 +36,10 @@ const props = defineProps({
     type: String,
     default: "",
   },
+  outline: {
+    type: Boolean,
+    default: false,
+  },
   isDisabled: {
     type: Boolean,
     default: false,
@@ -59,28 +64,64 @@ const props = defineProps({
   },
 });
 
-let defaultClasses = 'h-8 px-2.5 rounded focus:outline-none box-border inline-flex font-medium text-sm text-center w-fit disabled:cursor-not-allowed disabled:text-[#BFDBF847] disabled:bg-[#BCD6F00A] ';
+let defaultClasses = 'h-8 px-2.5 rounded place-items-center focus:outline-none box-border inline-flex font-medium text-sm text-center w-fit disabled:cursor-not-allowed disabled:text-[#BFDBF847] disabled:bg-[#BCD6F00A] ';
 
 const buttonAppearance = computed(() => {
+  if (props.outline) {
+    switch(props.appearance) {
+      case "primary":
+        return "border border-btn-primary text-btn-primary";
+      case "warning":
+        return "border border-btn-warning text-btn-warning";
+      case "danger":
+        return "border border-btn-danger text-btn-danger";
+      default:
+        return "border border-green-500 text-green-500";
+    }
+  }
   switch(props.appearance) {
     case "primary":
-      return "bg-btn-primary hover:bg-btn-primary-hover active:bg-btn-primary-active ";
+      return "bg-btn-primary hover:bg-btn-primary-hover active:bg-btn-primary-active";
     case "warning":
-      return "bg-btn-warning hover:bg-btn-warning-hover active:bg-btn-warning-active ";
+      return "bg-btn-warning hover:bg-btn-warning-hover active:bg-btn-warning-active";
     case "danger":
       return "bg-btn-danger hover:bg-btn-danger-hover active:bg-btn-danger-active";
     case "link":
-      return "bg-btn-subtle text-link-primary hover:underline underline-offset-2	";
+      return "bg-btn-subtle text-link-primary hover:underline underline-offset-2";
     case "subtle":
-      return "bg-btn-subtle active:bg-btn-subtle-active hover:bg-btn-subtle-hover ";
+      return "bg-btn-subtle active:bg-btn-subtle-active hover:bg-btn-subtle-hover";
     case "subtle-link": 
       return "bg-btn-subtle hover:underline underline-offset-2";
     default:
-      return "bg-btn-neutral hover:bg-btn-neutral-hover active:bg-btn-neutral-pressed ";
+      return "bg-btn-neutral hover:bg-btn-neutral-hover active:bg-btn-neutral-pressed";
+  }
+});
+
+const buttonSize = computed(() => {
+  switch(props.size) {
+    case "sm":
+      return "h-6 px-2 rounded text-xs";
+    case "lg":
+      return "h-12 px-3 rounded text-lg align-center text-center";
+    case "md":
+    default:
+      return "h-8 px-2.5 rounded text-sm";
   }
 });
 
 const buttonText = computed(() => {
+  if (props.outline) {
+    switch(props.appearance) {
+      case "primary":
+        return "text-btn-primary leading-8";
+      case "warning":
+        return "text-btn-warning leading-8";
+      case "danger":
+        return "text-btn-danger leading-8";
+      default:
+        return "text-green-500 leading-8";
+    }
+  }
   switch(props.appearance) {
     case "primary":
     case "warning":
@@ -95,13 +136,12 @@ const buttonText = computed(() => {
       return "text-default leading-8";
   }
 });
-
 </script>
 
 <template>
   <button
     :type="nativeType"
-    :class="defaultClasses + buttonAppearance"
+    :class="cn(defaultClasses, buttonAppearance, buttonSize)"
     :disabled="props.isDisabled"
     tabindex="0"
   >
