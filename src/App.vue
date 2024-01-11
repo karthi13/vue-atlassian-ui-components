@@ -1,21 +1,16 @@
 <template>
-  <div class="flex gap-2 flex-col">
+  <div class="flex flex-col gap-2">
     <Button>Default button</Button>
-    <Button type="primary">Primary button</Button>
-    <Button type="subtle">Subtle button</Button>
-    <Button type="warning">Warning button</Button>
-    <Button type="danger">Danger button</Button>
-    <Button type="link">Link button</Button>
-    <Button type="subtle-link">Subtle link button</Button>
-    <!-- <Button type="primary" is-disabled>Disabled button</Button> -->
-  </div>
-
-  <div class="flex gap-2 flex-col pt-4 h-20">
-    <Avatar />
+    <Button appearance="primary">Primary button</Button>
+    <Button appearance="subtle">Subtle button</Button>
+    <Button appearance="warning">Warning button</Button>
+    <Button appearance="danger">Danger button</Button>
+    <Button appearance="link">Link button</Button>
+    <Button appearance="subtle-link">Subtle ling button</Button>
+    <Button appearance="primary" is-disabled>Primary disabled button</Button>
   </div>
 </template>
 
 <script setup lang="ts">
 import Button from './components/Button/Button.vue'
-import Avatar from './components/Avatar/Avatar.vue'
 </script>
