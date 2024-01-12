@@ -26,6 +26,13 @@
       <Button appearance="warning" size="md" outline>Warning Outline button</Button>
       <Button appearance="danger" size="sm" outline>Danger Outline button</Button>
     </div>
+    <hr />
+    <div class="flex flex-col gap-2">
+      <Button appearance="primary" edge="rounded">Primary button</Button>
+      <Button appearance="danger" edge="square">Subtle button</Button>
+      <Button appearance="warning" edge="pill">Warning button</Button>
+    </div>
+    <hr />
   </div>
 </template>
 

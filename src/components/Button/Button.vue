@@ -13,6 +13,13 @@ const props = defineProps({
       return ["default", "primary", "warning", "danger", "link", "subtle", "subtle-link"].includes(value);
     },
   },
+  edge: {
+    type: String,
+    default: "rounded",
+    validator: (value: string) => {
+      return ["rounded", "square", "pill"].includes(value);
+    },
+  },
   size: {
     type: String as () => ButtonSize,
     default: "md",
@@ -136,12 +143,24 @@ const buttonText = computed(() => {
       return "text-default leading-8";
   }
 });
+
+const buttonEdge = computed(() => {
+  switch(props.edge) {
+    case "pill":
+      return "rounded-full";
+    case "square":
+      return "rounded-none";
+    case "rounded":
+    default:
+      return "rounded";
+  }
+});
 </script>
 
 <template>
   <button
     :type="nativeType"
-    :class="cn(defaultClasses, buttonAppearance, buttonSize)"
+    :class="cn(defaultClasses, buttonAppearance, buttonSize, buttonEdge)"
     :disabled="props.isDisabled"
     tabindex="0"
   >
