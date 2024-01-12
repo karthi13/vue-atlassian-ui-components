@@ -38,5 +38,4 @@
 
 <script setup lang="ts">
 import Button from './components/Button/Button.vue'
-import Avatar from './components/Avatar/Avatar.vue'
 </script>
