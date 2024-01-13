@@ -6,31 +6,30 @@
       <Button appearance="subtle">Subtle button</Button>
       <Button appearance="warning">Warning button</Button>
       <Button appearance="danger">Danger button</Button>
-      <Button appearance="link">Link button</Button>
-      <Button appearance="subtle-link">Subtle ling button</Button>
+      <Button appearance="success">Success button</Button>
     </div>
     <hr />
     <div class="flex flex-col gap-2">
-      <Button appearance="primary" is-disabled>Primary disabled button</Button>
+      <Button appearance="primary" disabled @click="() => console.log('clcik disabled')">Primary disabled button</Button>
     </div>
     <hr />
     <div class="flex flex-col gap-2">
       <Button appearance="primary" size="sm">Small Button</Button>
-      <Button appearance="primary" size="md">Small Button</Button>
-      <Button appearance="primary" size="lg">Small Button</Button>
+      <Button appearance="primary" size="md">Medium Button</Button>
+      <Button appearance="primary" size="lg">Large Button</Button>
     </div>
     <hr />
     <div class="flex flex-col gap-2">
-      <Button appearance="primary" size="lg" outline>Primary Outline button</Button>
-      <Button size="sm" outline>Default Outline button</Button>
-      <Button appearance="warning" size="md" outline>Warning Outline button</Button>
-      <Button appearance="danger" size="sm" outline>Danger Outline button</Button>
+      <Button appearance="primary" size="lg" :outline="true">Primary Outline button</Button>
+      <Button size="sm" :outline="true">Default Outline button</Button>
+      <Button appearance="warning" size="md" :outline="true">Warning Outline button</Button>
+      <Button appearance="danger" size="sm" :outline="true">Danger Outline button</Button>
     </div>
     <hr />
     <div class="flex flex-col gap-2">
-      <Button appearance="primary" edge="rounded">Primary button</Button>
-      <Button appearance="danger" edge="square">Subtle button</Button>
-      <Button appearance="warning" edge="pill">Warning button</Button>
+      <Button appearance="primary" shape="rounded">Primary button</Button>
+      <Button appearance="danger" shape="square">Subtle button</Button>
+      <Button appearance="warning" shape="pill">Warning button</Button>
     </div>
     <hr />
   </div>
