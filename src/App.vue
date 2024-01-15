@@ -1,5 +1,24 @@
 <template>
   <div class="flex flex-col w-full gap-2">
+    <h2>Avatar</h2>
+    <Avatar />
+  </div>
+  <h2>Badge</h2>
+  <div class="flex gap-2">
+    <Badge>8</Badge>
+    <Badge appearance="primary">8</Badge>
+    <Badge appearance="important">238</Badge>
+    <Badge appearance="added">158</Badge>
+    <Badge appearance="primaryInverted">80</Badge>
+    <Badge appearance="important">500K</Badge>
+    <Badge appearance="primary">-500</Badge>
+    <Badge appearance="important">500+</Badge>
+    <Badge appearance="important">250+</Badge>
+  </div>
+  <div>
+    <Kbd :keys="['option', 'shift']">K</Kbd>
+  </div>
+  <div class="flex flex-col w-full gap-2">
     <div class="flex flex-col gap-2">
       <Button>Default button</Button>
       <Button appearance="primary">Primary button</Button>
@@ -34,8 +53,17 @@
     </div>
     <hr />
   </div>
+
+  <Checkbox v-model="isChecked" label="Example Checkbox" />
 </template>
 
 <script setup lang="ts">
 import Button from './components/Button/Button.vue'
+import Badge from './components/Badge/Badge.vue'
+import Kbd from './components/Kbd/Kbd.vue'
+import Avatar from './components/Avatar/Avatar.vue';
+import Checkbox from './components/Checkbox/Checkbox.vue'
+import { ref } from 'vue';
+
+const isChecked = ref(false);
 </script>
