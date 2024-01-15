@@ -32,7 +32,3 @@ withDefaults(defineProps<{ appearance?: BadgeProps["appearance"] }>(), {
   appearance: "default"
 })
 </script>
-
-<style scoped>
-
-</style>
