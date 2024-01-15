@@ -32,7 +32,10 @@ export default {
         'link-primary-active': '#85B8FF',
         'default': '#B6C2CF',
         'inverse': '#1D2125',
-        'subtle': '##9FADBC'
+        'subtle': '##9FADBC',
+        'neutral': '#091E420F',
+        'success': '#216E4E',
+        'bg-success': '#DCFFF1',
       }
     },
   },
