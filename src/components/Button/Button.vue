@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { type ButtonHTMLAttributes } from "vue";
+import { type ButtonHTMLAttributes,  } from "vue";
 import { twMerge } from 'tailwind-merge'
 import { cva, type VariantProps } from "class-variance-authority";
 
@@ -21,6 +21,12 @@ const button = cva(["inline-flex place-items-center h-8 px-2.5 w-fit text-center
     outline: {
       true: [ "border bg-transparent hover:text-white" ],
     },
+    iconAfter: {
+      true: [ "flex-row-reverse gap-x-1" ],
+    },
+    iconBefore: {
+      true: [ "flex-row gap-x-1" ],
+    },
     shape: {
       rounded: [ "rounded" ],
       square: [ "rounded-none" ],
@@ -33,30 +39,35 @@ const button = cva(["inline-flex place-items-center h-8 px-2.5 w-fit text-center
     { appearance: "danger", outline: true, class: "border-btn-danger text-btn-danger hover:bg-btn-danger" },
     { appearance: "success", size: [ "sm","md","lg"], outline: true, class: "border-green-500 text-green-500 hover:bg-green-500" },
   ],
+  defaultVariants: {
+    appearance: "default",
+    size: "md",
+    shape: "rounded",
+    outline: false,
+    iconAfter: false,
+    iconBefore: false,
+  }
 });
 type ButtonProps = VariantProps<typeof button>;
 
-withDefaults(
-  defineProps<{ 
-    appearance:  ButtonProps["appearance"]; 
-    size: ButtonProps["size"];
-    shape: ButtonProps["shape"];
-    nativeType: ButtonHTMLAttributes["type"];
-    outline: ButtonProps["outline"];
+const props = withDefaults(
+  defineProps<{
+    appearance?: ButtonProps["appearance"];
+    size?: ButtonProps["size"];
+    shape?: ButtonProps["shape"];
+    outline?: ButtonProps["outline"];
+    nativeType?: ButtonHTMLAttributes["type"];
+    iconAfter: ButtonProps["iconAfter"];
+    iconBefore: ButtonProps["iconBefore"];
   }>(),
   {
-    appearance: "default",
-    shape: "rounded",
-    size: "sm",
     nativeType: "button",
-    outline: false,
+    iconAfter: false,
+    iconBefore: false,
   },
 );
 
-
-
-
-
+console.log(props);
 // import { twMerge } from "tailwind-merge";
 // import { cva, type VariantProps } from "class-variance-authority";
 
@@ -270,27 +281,15 @@ withDefaults(
 //   }
 // });
 
-// const buttonEdge = computed(() => {
-//   switch(props.edge) {
-//     case "pill":
-//       return "rounded-full";
-//     case "square":
-//       return "rounded-none";
-//     case "rounded":
-//     default:
-//       return "rounded";
-//   }
-// });
+
 </script>
 
 <template>
   <button
-    :class="twMerge(button({ appearance, size, outline, shape }))"
+    :class="twMerge(button({ appearance, size, outline, shape, iconAfter, iconBefore }))"
     :type="nativeType"
     tabindex="0"
   >
-    <span>
-      <slot></slot>
-    </span>
+    <slot></slot>
   </button>
 </template>
