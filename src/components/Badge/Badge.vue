@@ -1,13 +1,13 @@
 <template>
   <span :class="badge({ appearance })">
-    <slot></slot>
+    <span><slot></slot></span>
   </span>
 </template>
 
 <script setup lang="ts">
 import { cva, type VariantProps} from 'class-variance-authority';
 
-const badge = cva('tracking-tight	inline-flex items-center text-inverse rounded-full h-5 box-border ps-2 pe-2 leading-4 text-sm text-center place-items-center', {
+const badge = cva('tracking-tight	inline-flex items-center text-inverse rounded-full h-4 box-border ps-1.5 pe-1.5 leading-4 text-xs text-center place-items-center', {
   variants: {
     appearance: {
       default: "bg-neutral",
