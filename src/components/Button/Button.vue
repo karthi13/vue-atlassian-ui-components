@@ -51,6 +51,7 @@ const button = cva("inline-flex place-items-center h-8 px-2.5 w-fit text-center 
     iconBefore: false,
   }
 });
+
 type ButtonProps = VariantProps<typeof button>;
 
 const props = withDefaults(
@@ -70,7 +71,6 @@ const props = withDefaults(
   },
 );
 
-console.log(props.iconBefore);
 </script>
 
 <template>

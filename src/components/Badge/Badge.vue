@@ -1,7 +1,7 @@
 <template>
-    <span :class="badge({ appearance })">
-        <slot></slot>
-    </span>
+  <span :class="badge({ appearance })">
+    <slot></slot>
+  </span>
 </template>
 
 <script setup lang="ts">
