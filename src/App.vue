@@ -1,9 +1,9 @@
 <template>
-  <div>
-    <Button />
+  <div class="flex flex-col w-full gap-2">
+    <Badge />
   </div>
 </template>
 
 <script setup lang="ts">
-import Button from './showcase/Button.vue'
+import Badge from './showcase/Badge.vue'
 </script>
