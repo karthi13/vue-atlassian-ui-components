@@ -45,12 +45,25 @@
         Avatar Initials 
       </h1>
       <div class="flex gap-5 justify-end items-center">
-        <Avatar size="xs" initials="AB"/>
-        <Avatar size="sm" initials="CD" />
-        <Avatar size="md" initials="EF"/>
-        <Avatar size="lg" initials="GH" />
-        <Avatar size="xl"  initials="JK"/>
-        <Avatar size="2xl" initials="LM"/>
+        <Avatar size="xs" initials="AB" presence="online"/>
+        <Avatar size="sm" initials="CD" presence="offline"/>
+        <Avatar size="md" initials="EF" presence="busy"/>
+        <Avatar size="lg" initials="GH" presence="focus"/>
+        <Avatar size="xl"  initials="JK" presence="busy"/>
+        <Avatar size="2xl" initials="LM" presence="online"/>
+      </div>
+    </div>
+    <div class="flex flex-col">
+      <h1 class="flex pb-2 text-xl">
+        Avatar Initials 
+      </h1>
+      <div class="flex gap-5 justify-end items-center">
+        <Avatar size="xs" initials="AB" presence="online" borderColor="blue"/>
+        <Avatar size="sm" initials="CD" presence="offline" borderColor="yellow"/>
+        <Avatar size="md" initials="EF" presence="busy"/>
+        <Avatar size="lg" initials="GH" presence="focus"/>
+        <Avatar size="xl"  initials="JK" presence="busy"/>
+        <Avatar size="2xl" initials="LM" presence="online"/>
       </div>
     </div>
   </div>
