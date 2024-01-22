@@ -1,11 +1,10 @@
 <template>
-  <div
-    role="img"
-    aria-labelledby="avatar-label"
-    :class="twMerge(avatarContainerClass({ appearance, borderColor, size, disabled }))"
-    :title="name"
-  >
-    <span :title="name">
+  <div role="img">
+    <span
+      :title="name" 
+      :class="twMerge(avatarContainerClass({ appearance, borderColor, size, disabled }))"
+      aria-labelledby="avatar-label"
+    >
       <img
         v-if="validImage"
         class="object-contain w-full h-full" 
@@ -13,9 +12,10 @@
         :alt="name"
       />
       <template v-else-if="initials">{{ initials }}</template>
-      <Anonymous v-else class=""/>
+      <Anonymous v-else :class="contentClass({ size })" />
+      <span class="absolute bg-green-600 right-4 top-4"></span>
     </span>
-    <span id="avatar-label" hidden>{{name}}</span>
+    <span v-if="name" id="avatar-label" hidden>{{name}}</span>
   </div>
 </template>
 
@@ -26,33 +26,47 @@ import { cva, type VariantProps } from "class-variance-authority";
 import Anonymous from './Anonymous.vue';
 
 const validImage = ref('');
-const avatarContainerClass = cva("inline-flex items-center justify-center text-slate-700 text-xl font-medium h-28 w-28 shrink-0 bg-slate-200 rounded-full overflow-hidden", {
+
+const contentClass = cva("", {
+  variants: {
+    size: {
+      xs: [ "text-[6px] w-4 h-4" ],
+      sm: [ "w-6 h-6" ],
+      md: [ "w-8 h-8" ],
+      lg: [ "w-10 h-10" ],
+      xl: [ "w-12 h-12" ],
+      '2xl': [ "w-16 h-16" ],
+    }
+  }
+});
+
+const avatarContainerClass = cva("inline-flex relative items-center justify-center select-none shrink-0 bg-slate-200 overflow-hidden text-slate-950", {
   variants: {
     appearance: {
       circle: [ "rounded-full" ],
       square: [ "rounded" ],
     },
     borderColor: {
-      blue: [ "border-blue-500" ],
-      green: [ "border-green-500" ],
-      red: [ "border-red-500" ],
-      yellow: [ "border-yellow-500" ],
-      gray: [ "border-gray-500" ],
-      white: [ "border-white" ],
-      black: [ "border-black" ],
-      none: [ "border-transparent" ],
+      blue: [ "ring-2 border-blue-500" ],
+      green: [ "ring-2 border-green-500" ],
+      red: [ "ring-2 border-red-500" ],
+      yellow: [ "ring-2 border-yellow-500" ],
+      gray: [ "ring-2 border-gray-500" ],
+      white: [ "ring-2 border-white" ],
+      black: [ "ring-2 border-black" ],
+      none: [ "ring-2 border-transparent" ],
     },
     size: {
-      xs: [ "w-4 h-4" ],
-      sm: [ "w-8 h-8" ],
-      md: [ "w-10 h-10" ],
-      lg: [ "w-12 h-12" ],
-      xl: [ "w-16 h-16" ],
-      '2xl': [ "w-20 h-20" ],
+      xs: [ "text-xs w-6 h-6" ],
+      sm: [ "text-sm w-8 h-8" ],
+      md: [ "text-base w-10 h-10" ],
+      lg: [ "text-lg w-12 h-12" ],
+      xl: [ "text-xl w-16 h-16" ],
+      '2xl': [ "text-2xl w-20 h-20" ],
     },
     disabled: {
-      true: [ "opacity-50 cursor-not-allowed ring-2 ring-blue-500" ],
-      false: [ "ring-2 ring-red-500" ],
+      true: [ "opacity-50 cursor-not-allowed" ],
+      false: [ "" ],
     },
   }
 });
