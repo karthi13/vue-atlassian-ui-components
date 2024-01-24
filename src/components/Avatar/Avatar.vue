@@ -129,17 +129,6 @@ type AvatarContainerProps = VariantProps<typeof avatarContainerClass>;
 type Presence = 'busy' | 'focus' | 'online' | 'offline'
 type Status = 'approved' | 'declined' | 'locked' 
 
-watchEffect(() => {
-  const image = new Image();
-  image.src = props.src ?? '';
-  image.decode().then(() => {
-    validImage.value = props.src as string ?? '';
-  }).catch((error) => {
-    validImage.value = '';
-    console.error('Error decoding the image -> ', error);
-  });
-});
-
 const props = withDefaults(
   defineProps<{ 
     appearance?: AvatarContainerProps['appearance']; 
@@ -162,5 +151,16 @@ const props = withDefaults(
   },
 );
 
+watchEffect(() => {
+  const image = new Image();
+  image.src = props.src ?? '';
+  image.decode().then(() => {
+    validImage.value = props.src as string ?? '';
+  }).catch((error) => {
+    validImage.value = '';
+    console.error('Error decoding the image -> ', error);
+  });
+});
+  
 const initials = computed(() => props.initials || props.name?.charAt(0).toUpperCase());
 </script>
