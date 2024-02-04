@@ -6,37 +6,22 @@
       :title="item" 
       class="no-underline"
     >
-      {{ kbdKeysMap[item] }}
+      {{ kbdKeysMap[item as KbdKey] }}
     </abbr>
-    <span><slot /></span>
+    <span>
+      <slot />
+    </span>
   </kbd>
 </template>
 
 <script setup lang="ts">
-const props = defineProps({ keys: Array })
-const kbdKeysMap = {
-  command: "⌘",
-  shift: "⇧",
-  ctrl: "⌃",
-  option: "⌥",
-  enter: "↵",
-  delete: "⌫",
-  escape: "⎋",
-  tab: "⇥",
-  capslock: "⇪",
-  up: "↑",
-  right: "→",
-  down: "↓",
-  left: "←",
-  pageup: "⇞",
-  pagedown: "⇟",
-  home: "↖",
-  end: "↘",
-  help: "?",
-  space: "␣",
-  windows: "⊞",
-  alt: "⎇",
+import { PropType } from 'vue';
+import { kbdKeysMap, KbdKey } from './Kbd.types';
 
-
-};
+defineProps({
+  keys: {
+    type: Array as PropType<string[]>,
+    required: true,
+  },
+});
 </script>
