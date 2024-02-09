@@ -9,3 +9,4 @@ import Badge from '../components/Badge/Badge.vue';
 </script>
 
 <style scoped></style>
+
