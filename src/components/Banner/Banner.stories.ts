@@ -1,19 +1,19 @@
-import type { Meta, StoryObj } from "@storybook/vue3";
-import Banner from "./Banner.vue";
+import type { Meta, StoryObj } from '@storybook/vue3';
+import Banner from './Banner.vue';
 
 const meta = {
   component: Banner,
-  tags: ["autodocs"],
+  tags: ['autodocs'],
   argTypes: {
     appearance: {
-      control: "select",
-      options: ["warning", "error", "announcement"],
+      control: 'select',
+      options: ['warning', 'error', 'announcement'],
     },
-    icon: { control: "text" },
-    testId: { control: "text" },
+    icon: { control: 'text' },
+    testId: { control: 'text' },
   },
   args: {
-    appearance: "warning",
+    appearance: 'warning',
     icon: undefined,
     testId: undefined,
   },
@@ -23,7 +23,7 @@ type Story = StoryObj<typeof meta>;
 
 export const Primary: Story = {
   args: {
-    default: "Hello world",
+    default: 'Hello world',
   },
 };
 
