@@ -1,0 +1,23 @@
+name: PR Workflow
+
+on:
+  pull_request:
+    branches: [main]
+
+jobs:
+  build:
+    runs_on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@4
+      - uses: actions/setup-node@4
+        with:
+          node-version: 'lts'
+
+      - run: npm ci
+
+      - name: Check format
+        run: npm run format:check
+
+      - name: Lint
+        run: npm run lint
