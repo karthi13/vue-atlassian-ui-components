@@ -5,28 +5,28 @@ import { cva, type VariantProps } from 'class-variance-authority';
 
 const button = cva(
   [
-    'inline-flex place-items-center h-8 px-2.5 w-fit text-center disabled:cursor-not-allowed disabled:text-[#BFDBF847] disabled:bg-[#BCD6F00A]',
+    'inline-flex place-items-center h-8 px-2.5 w-fit text-center disabled:cursor-not-allowed disabled:text-dark-neutral-400A disabled:bg-dark-neutral-100A',
   ],
   {
     variants: {
       appearance: {
         default: [
-          'bg-[#A1BDD914] hover:bg-[#A6C5E229] active:bg-[#BFDBF847] text-[#B6C2CF]',
+          'dark:bg-dark-neutral-200A hover:bg-dark-neutral-300A active:bg-dark-neutral-400A text-dark-neutral-900',
         ],
         primary: [
-          'bg-[#579DFF] hover:bg-[#85B8FF] active:bg-[#CCE0FF] text-[#1d2125]',
+          'bg-blue-400 hover:bg-blue-300 active:bg-blue-200 text-dark-neutral-100',
         ],
         subtle: [
-          'bg-[#00000000] hover:bg-[#A1BDD914] active:bg-[#A6C5E229] text-[#B6C2CF]',
+          'bg-light-neutral--100 hover:bg-dark-neutral-200A active:bg-dark-neutral-300A text-dark-neutral-900',
         ],
         warning: [
-          'bg-[#f5cc47] hover:bg-[#E2B203] active:bg-[#CF9F02] text-[#1d2125]',
+          'bg-yellow-300 hover:bg-yellow-400 active:bg-yellow-500 text-dark-neutral-100',
         ],
         danger: [
-          'bg-[#f87268] hover:bg-[#FD9891] active:bg-[#FFD5D2] text-[#1d2125]',
+          'bg-red-400 hover:bg-red-300 active:bg-red-200 text-dark-neutral-100',
         ],
         success: [
-          'bg-[#47c978] hover:bg-[#2EBD6E] active:bg-[#1EBD6E] text-[#1d2125]',
+          'bg-green-400 hover:bg-green-300 active:bg-green-200 text-dark-neutral-100',
         ],
       },
       size: {
@@ -53,23 +53,22 @@ const button = cva(
       {
         appearance: 'primary',
         outline: true,
-        class: 'border-btn-primary text-btn-primary hover:bg-btn-primary ',
+        class: 'border-blue-400 text-blue-400 hover:bg-blue-400 ',
       },
       {
         appearance: 'warning',
         outline: true,
-        class: 'border-btn-warning text-btn-warning hover:bg-btn-warning',
+        class: 'border-yellow-300 text-yellow-300 hover:bg-yellow-300',
       },
       {
         appearance: 'danger',
         outline: true,
-        class: 'border-btn-danger text-btn-danger hover:bg-btn-danger',
+        class: 'border-red-400 text-red-400 hover:bg-red-400',
       },
       {
         appearance: 'success',
-        size: ['sm', 'md', 'lg'],
         outline: true,
-        class: 'border-green-500 text-green-500 hover:bg-green-500',
+        class: 'border-green-400 text-green-400 hover:bg-green-400',
       },
     ],
     defaultVariants: {
@@ -89,10 +88,10 @@ withDefaults(
     appearance?: ButtonProps['appearance'];
     size?: ButtonProps['size'];
     shape?: ButtonProps['shape'];
-    outline?: ButtonProps['outline'];
+    outline?: boolean;
     nativeType?: ButtonHTMLAttributes['type'];
-    iconAfter?: ButtonProps['iconAfter'];
-    iconBefore?: ButtonProps['iconBefore'];
+    iconAfter?: boolean;
+    iconBefore?: boolean;
   }>(),
   {
     nativeType: 'button',

@@ -1,6 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/vue3';
 
 import Button from './Button.vue';
+import ButtonStory from './stories/ButtonStory.vue';
 
 // More on how to set up stories at: https://storybook.js.org/docs/writing-stories
 const meta = {
@@ -16,8 +17,8 @@ const meta = {
         'warning',
         'danger',
         'link',
+        'success',
         'subtle',
-        'subtle-link',
       ],
     },
     size: { control: 'select', options: ['sm', 'md', 'lg'] },
@@ -46,11 +47,11 @@ const meta = {
 type Story = StoryObj<typeof meta>;
 
 export const Primary: Story = {
-  args: {
-    appearance: 'primary',
-    size: 'md',
-    default: 'Primary button',
-  },
+  render: () => ({
+    components: { ButtonStory },
+    template: '<ButtonStory />',
+  }),
+  decorators: [() => ({ template: '<story />' })],
 };
 
 export default meta;
