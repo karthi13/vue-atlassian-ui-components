@@ -1,0 +1,51 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Button appearance > danger button 1`] = `"<button class="inline-flex place-items-center w-fit text-center disabled:cursor-not-allowed disabled:text-dark-neutral-400A disabled:bg-dark-neutral-100A bg-blue-400 hover:bg-blue-300 active:bg-blue-200 text-dark-neutral-100 py-4 h-8 px-2.5 text-sm rounded" type="button" tabindex="0">Click me</button>"`;
+
+exports[`Button appearance > danger button 2`] = `"<button class="inline-flex place-items-center w-fit text-center disabled:cursor-not-allowed disabled:text-dark-neutral-400A disabled:bg-dark-neutral-100A bg-light-neutral--100 hover:bg-dark-neutral-200A active:bg-dark-neutral-300A text-dark-neutral-900 py-4 h-8 px-2.5 text-sm rounded" type="button" tabindex="0">Click me</button>"`;
+
+exports[`Button appearance > danger button 3`] = `"<button class="inline-flex place-items-center w-fit text-center disabled:cursor-not-allowed disabled:text-dark-neutral-400A disabled:bg-dark-neutral-100A bg-yellow-300 hover:bg-yellow-400 active:bg-yellow-500 text-dark-neutral-100 py-4 h-8 px-2.5 text-sm rounded" type="button" tabindex="0">Click me</button>"`;
+
+exports[`Button appearance > danger button 4`] = `"<button class="inline-flex place-items-center w-fit text-center disabled:cursor-not-allowed disabled:text-dark-neutral-400A disabled:bg-dark-neutral-100A bg-red-400 hover:bg-red-300 active:bg-red-200 text-dark-neutral-100 py-4 h-8 px-2.5 text-sm rounded" type="button" tabindex="0">Click me</button>"`;
+
+exports[`Button appearance > danger button 5`] = `"<button class="inline-flex place-items-center w-fit text-center disabled:cursor-not-allowed disabled:text-dark-neutral-400A disabled:bg-dark-neutral-100A dark:bg-dark-neutral-200A hover:bg-dark-neutral-300A active:bg-dark-neutral-400A text-dark-neutral-900 py-4 h-8 px-2.5 text-sm rounded" type="button" tabindex="0">Click me</button>"`;
+
+exports[`Button appearance > success button 1`] = `"<button class="inline-flex place-items-center w-fit text-center disabled:cursor-not-allowed disabled:text-dark-neutral-400A disabled:bg-dark-neutral-100A bg-green-400 hover:bg-green-300 active:bg-green-200 text-dark-neutral-100 py-4 h-8 px-2.5 text-sm rounded" type="button" tabindex="0">Click me</button>"`;
+
+exports[`Button outline > danger button 1`] = `"<button class="inline-flex place-items-center w-fit text-center disabled:cursor-not-allowed disabled:text-dark-neutral-400A disabled:bg-dark-neutral-100A active:bg-red-200 py-4 h-8 px-2.5 text-sm border bg-transparent hover:text-white rounded border-red-400 text-red-400 hover:bg-red-400" type="button" tabindex="0">Click me</button>"`;
+
+exports[`Button outline > default button 1`] = `"<button class="inline-flex place-items-center w-fit text-center disabled:cursor-not-allowed disabled:text-dark-neutral-400A disabled:bg-dark-neutral-100A dark:bg-dark-neutral-200A hover:bg-dark-neutral-300A active:bg-dark-neutral-400A text-dark-neutral-900 py-4 h-8 px-2.5 text-sm border bg-transparent hover:text-white rounded" type="button" tabindex="0">Click me</button>"`;
+
+exports[`Button outline > primary button 1`] = `"<button class="inline-flex place-items-center w-fit text-center disabled:cursor-not-allowed disabled:text-dark-neutral-400A disabled:bg-dark-neutral-100A active:bg-blue-200 py-4 h-8 px-2.5 text-sm border bg-transparent hover:text-white rounded border-blue-400 text-blue-400 hover:bg-blue-400" type="button" tabindex="0">Click me</button>"`;
+
+exports[`Button outline > subtle button 1`] = `"<button class="inline-flex place-items-center w-fit text-center disabled:cursor-not-allowed disabled:text-dark-neutral-400A disabled:bg-dark-neutral-100A hover:bg-dark-neutral-200A active:bg-dark-neutral-300A text-dark-neutral-900 py-4 h-8 px-2.5 text-sm border bg-transparent hover:text-white rounded" type="button" tabindex="0">Click me</button>"`;
+
+exports[`Button outline > success button 1`] = `"<button class="inline-flex place-items-center w-fit text-center disabled:cursor-not-allowed disabled:text-dark-neutral-400A disabled:bg-dark-neutral-100A active:bg-green-200 py-4 h-8 px-2.5 text-sm border bg-transparent hover:text-white rounded border-green-400 text-green-400 hover:bg-green-400" type="button" tabindex="0">Click me</button>"`;
+
+exports[`Button outline > warning button 1`] = `"<button class="inline-flex place-items-center w-fit text-center disabled:cursor-not-allowed disabled:text-dark-neutral-400A disabled:bg-dark-neutral-100A active:bg-yellow-500 py-4 h-8 px-2.5 text-sm border bg-transparent hover:text-white rounded border-yellow-300 text-yellow-300 hover:bg-yellow-300" type="button" tabindex="0">Click me</button>"`;
+
+exports[`Button shape > pill button 1`] = `"<button class="inline-flex place-items-center w-fit text-center disabled:cursor-not-allowed disabled:text-dark-neutral-400A disabled:bg-dark-neutral-100A bg-blue-400 hover:bg-blue-300 active:bg-blue-200 text-dark-neutral-100 py-4 h-8 px-2.5 text-sm rounded-full" type="button" tabindex="0">Click me</button>"`;
+
+exports[`Button shape > rounded button 1`] = `"<button class="inline-flex place-items-center w-fit text-center disabled:cursor-not-allowed disabled:text-dark-neutral-400A disabled:bg-dark-neutral-100A bg-blue-400 hover:bg-blue-300 active:bg-blue-200 text-dark-neutral-100 py-4 h-8 px-2.5 text-sm rounded" type="button" tabindex="0">Click me</button>"`;
+
+exports[`Button shape > square button 1`] = `"<button class="inline-flex place-items-center w-fit text-center disabled:cursor-not-allowed disabled:text-dark-neutral-400A disabled:bg-dark-neutral-100A bg-blue-400 hover:bg-blue-300 active:bg-blue-200 text-dark-neutral-100 py-4 h-8 px-2.5 text-sm rounded-none" type="button" tabindex="0">Click me</button>"`;
+
+exports[`Button size > large button 1`] = `"<button class="inline-flex place-items-center h-8 w-fit text-center disabled:cursor-not-allowed disabled:text-dark-neutral-400A disabled:bg-dark-neutral-100A dark:bg-dark-neutral-200A hover:bg-dark-neutral-300A active:bg-dark-neutral-400A text-dark-neutral-900 text-lg py-6 px-3 leading-4 rounded" type="button" tabindex="0">Click me</button>"`;
+
+exports[`Button size > medium button 1`] = `"<button class="inline-flex place-items-center w-fit text-center disabled:cursor-not-allowed disabled:text-dark-neutral-400A disabled:bg-dark-neutral-100A dark:bg-dark-neutral-200A hover:bg-dark-neutral-300A active:bg-dark-neutral-400A text-dark-neutral-900 py-4 h-8 px-2.5 text-sm rounded" type="button" tabindex="0">Click me</button>"`;
+
+exports[`Button size > small button 1`] = `"<button class="inline-flex place-items-center w-fit text-center disabled:cursor-not-allowed disabled:text-dark-neutral-400A disabled:bg-dark-neutral-100A dark:bg-dark-neutral-200A hover:bg-dark-neutral-300A active:bg-dark-neutral-400A text-dark-neutral-900 font-medium tracking-normal h-6 px-2 text-xs rounded" type="button" tabindex="0">Click me</button>"`;
+
+exports[`Button with icons > Icon after button 1`] = `"<button class="inline-flex place-items-center w-fit text-center disabled:cursor-not-allowed disabled:text-dark-neutral-400A disabled:bg-dark-neutral-100A bg-blue-400 hover:bg-blue-300 active:bg-blue-200 text-dark-neutral-100 py-4 h-8 px-2.5 text-sm rounded" type="button" tabindex="0">Click me<email-icon></email-icon></button>"`;
+
+exports[`Button with icons > Icon before button 1`] = `
+"<button class="inline-flex place-items-center w-fit text-center disabled:cursor-not-allowed disabled:text-dark-neutral-400A disabled:bg-dark-neutral-100A bg-blue-400 hover:bg-blue-300 active:bg-blue-200 text-dark-neutral-100 py-4 h-8 px-2.5 text-sm rounded" type="button" tabindex="0">
+  <email-icon></email-icon>Click me
+</button>"
+`;
+
+exports[`Button with icons > Icon only button 1`] = `
+"<button class="inline-flex place-items-center w-fit text-center disabled:cursor-not-allowed disabled:text-dark-neutral-400A disabled:bg-dark-neutral-100A bg-blue-400 hover:bg-blue-300 active:bg-blue-200 text-dark-neutral-100 py-4 h-8 px-2.5 text-sm rounded-full" type="button" tabindex="0">
+  <email-icon></email-icon>
+</button>"
+`;

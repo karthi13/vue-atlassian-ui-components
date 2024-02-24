@@ -1,7 +1,7 @@
 import { h } from 'vue'
 import { render, screen } from "@testing-library/vue"
-import Button from "./Button.vue"
-import { BUTTON_APPEARANCE, BUTTON_SIZE, BUTTON_SHAPE } from './Button.types'
+import Button from "../src/components/Button/Button.vue"
+import { BUTTON_APPEARANCE, BUTTON_SIZE, BUTTON_SHAPE } from '../src/components/Button/Button.types'
 
 const BUTTON_TEXT = "Click me";
 

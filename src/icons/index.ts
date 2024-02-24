@@ -6,5 +6,6 @@ import Approve from './Approve.vue';
 import Decline from './Decline.vue';
 import Locked from './Locked.vue';
 import Anonymous from './Anonymous.vue';
+import Warning from './warning.vue'
 
-export { Anonymous, Busy, Focus, Offline, Online, Approve, Decline, Locked };
+export { Anonymous, Busy, Focus, Offline, Online, Approve, Decline, Locked, Warning };
