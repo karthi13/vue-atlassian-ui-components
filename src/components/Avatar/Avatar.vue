@@ -41,7 +41,7 @@ import {
   Approve,
   Decline,
   Locked,
-} from '@icons/index';
+} from '@/icons/index';
 
 const validImage = ref('');
 

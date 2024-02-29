@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import Button from '@components/Button/Button.vue'
-import Bell from '@icons/Bell.vue'
-import Email from '@icons/Email.vue'
+import Bell from '@/icons/Bell.vue'
+import Email from '@/icons/Email.vue'
 </script>
 
 <template>
