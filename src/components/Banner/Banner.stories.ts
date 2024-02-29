@@ -1,5 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/vue3';
 import Banner from './Banner.vue';
+import { defineComponent } from 'vue';
 
 const meta = {
   component: Banner,
@@ -7,24 +8,37 @@ const meta = {
   argTypes: {
     appearance: {
       control: 'select',
-      options: ['warning', 'error', 'announcement'],
+      options: ['announcement','warning', 'error'],
     },
-    icon: { control: 'text' },
     testId: { control: 'text' },
   },
   args: {
-    appearance: 'warning',
-    icon: undefined,
+    appearance: 'announcement',
     testId: undefined,
   },
 } satisfies Meta<typeof Banner>;
 
 type Story = StoryObj<typeof meta>;
 
-export const Primary: Story = {
+export const Announcement: Story = {
   args: {
-    default: 'Hello world',
+    default: "Hello world",
   },
 };
+
+export const Warning: Story = {
+  args: {
+    default: "Hello world",
+    appearance: 'warning',
+  },
+};
+
+export const Error: Story = {
+  args: {
+    default: 'Hello world',
+    appearance: 'error',
+  },
+};
+
 
 export default meta;

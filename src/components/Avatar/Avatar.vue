@@ -3,12 +3,14 @@
     <span
       :title="name"
       :class="avatarContainerClass({ appearance, borderColor, size, disabled })"
-      aria-labelledby="avatar-label">
+      aria-labelledby="avatar-label"
+    >
       <img
         v-if="validImage"
         class="object-contain"
         :src="validImage"
-        :alt="name" />
+        :alt="name"
+      />
       <template v-else-if="initials">{{ initials }}</template>
       <Anonymous v-else :class="contentClass({ size })" />
     </span>
@@ -39,7 +41,7 @@ import {
   Approve,
   Decline,
   Locked,
-} from './icons';
+} from '@/icons/index';
 
 const validImage = ref('');
 
