@@ -29,11 +29,11 @@ const meta = {
         'space',
         'windows',
         'alt',
-      ]
+      ],
     },
   },
   args: {
-    keys: ['cmd', 'option']
+    keys: ['cmd', 'option'],
   },
 } satisfies Meta<typeof Banner>;
 
@@ -41,7 +41,7 @@ type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
   args: {
-    default: "K",
+    default: 'K',
   },
 };
 export default meta;

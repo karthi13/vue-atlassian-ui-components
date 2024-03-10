@@ -6,6 +6,18 @@ import Approve from './Approve.vue';
 import Decline from './Decline.vue';
 import Locked from './Locked.vue';
 import Anonymous from './Anonymous.vue';
-import Warning from './warning.vue'
+import Warning from './warning.vue';
+import Email from './Email.vue';
 
-export { Anonymous, Busy, Focus, Offline, Online, Approve, Decline, Locked, Warning };
+export {
+  Anonymous,
+  Busy,
+  Focus,
+  Offline,
+  Online,
+  Approve,
+  Decline,
+  Locked,
+  Warning,
+  Email,
+};
