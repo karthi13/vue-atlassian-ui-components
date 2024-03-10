@@ -27,35 +27,35 @@ type Story = StoryObj<typeof meta>;
 export const Default: Story = {
   args: {
     default: '8',
-    appearance: 'default'
+    appearance: 'default',
   },
 };
 
 export const Primary: Story = {
   args: {
     default: 'Hello world',
-    appearance: 'primary'
+    appearance: 'primary',
   },
 };
 
 export const Added: Story = {
   args: {
     default: '100',
-    appearance: 'added'
+    appearance: 'added',
   },
 };
 
 export const Important: Story = {
   args: {
     default: 'important',
-    appearance: 'important'
+    appearance: 'important',
   },
 };
 
 export const PrimaryInverted: Story = {
   args: {
     default: 'primary inverted',
-    appearance: 'primaryInverted'
+    appearance: 'primaryInverted',
   },
 };
 

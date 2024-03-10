@@ -1,11 +1,7 @@
 <template>
-  <kbd class="justify-center w-fit px-1 py-0.25 inline-flex space-x-0.5 items-center font-sans font-normal text-center text-small shadow-small bg-light-neutral-100 border border-b-[3px] border-[#e5e7eb] text-[#52525b] rounded-lg dark:bg-[#27272a] dark:text-white ">
-    <abbr 
-      v-for="item in keys" 
-      :key="item" 
-      :title="item" 
-      class="no-underline"
-    >
+  <kbd
+    class="justify-center w-fit px-1 py-0.25 inline-flex space-x-0.5 items-center font-sans font-normal text-center text-small shadow-small bg-light-neutral-100 border border-b-[3px] border-[#e5e7eb] text-[#52525b] rounded-lg dark:bg-[#27272a] dark:text-white">
+    <abbr v-for="item in keys" :key="item" :title="item" class="no-underline">
       {{ kbdKeysMap[item as KbdKey] }}
     </abbr>
     <span>
@@ -18,7 +14,7 @@
 import { PropType } from 'vue';
 import { kbdKeysMap, KbdKey } from './Shortcut.types.ts';
 
-const props = defineProps({
+defineProps({
   keys: {
     type: Array as PropType<string[]>,
     required: true,
