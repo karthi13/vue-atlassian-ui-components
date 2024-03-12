@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import Button from '@/components/Button/Button.vue'
-import Bell from '@/icons/Bell.vue'
-import Email from '@/icons/Email.vue'
+import Button from '@/components/Button/Button.vue';
+import Bell from '@/icons/Bell.vue';
+import Email from '@/icons/Email.vue';
 </script>
 
 <template>
@@ -39,25 +39,41 @@ import Email from '@/icons/Email.vue'
     <div class="flex flex-col">
       <h3 class="font-sans text-sm font-bold">Button Shapes</h3>
       <div class="flex flex-col gap gap-y-2">
-        <Button appearance="primary" shape="rounded" size="sm">Rounded Button</Button>
-        <Button appearance="warning" shape="pill" size="md">Circle Button</Button>
-        <Button appearance="danger" shape="square" size="lg">Sharp Button</Button>
+        <Button appearance="primary" shape="rounded" size="sm"
+          >Rounded Button</Button
+        >
+        <Button appearance="warning" shape="pill" size="md"
+          >Circle Button</Button
+        >
+        <Button appearance="danger" shape="square" size="lg"
+          >Sharp Button</Button
+        >
       </div>
     </div>
     <div class="flex flex-col">
       <h3 class="font-sans text-sm font-bold">Button with Icons</h3>
       <div class="flex flex-col gap gap-y-2">
-        <Button appearance="primary" shape="rounded" size="md" icon-before><Bell /> Rounded Button</Button>
-        <Button appearance="warning" shape="pill" size="md" icon-after>Circle Button <Bell /></Button>
+        <Button appearance="primary" shape="rounded" size="md" icon-before
+          ><Bell /> Rounded Button</Button
+        >
+        <Button appearance="warning" shape="pill" size="md" icon-after
+          >Circle Button <Bell
+        /></Button>
       </div>
     </div>
     <div class="flex flex-col">
       <h3 class="font-sans text-sm font-bold">Icon only Buttons</h3>
       <div class="flex flex-col gap gap-y-2">
         <div class="flex gap-2">
-          <Button appearance="danger" shape="square" size="lg"><Email /></Button>
-          <Button appearance="danger" shape="square" size="sm"><Email /></Button>
-          <Button appearance="danger" shape="square" size="md"><Email /></Button>
+          <Button appearance="danger" shape="square" size="lg"
+            ><Email
+          /></Button>
+          <Button appearance="danger" shape="square" size="sm"
+            ><Email
+          /></Button>
+          <Button appearance="danger" shape="square" size="md"
+            ><Email
+          /></Button>
         </div>
         <div class="flex gap-2">
           <Button appearance="danger" shape="pill" size="lg"><Email /></Button>

@@ -13,6 +13,10 @@ const props = defineProps<{
   items: BreadcrumbItems[];
 }>();
 
+const addBreadCrumbItemId = () =>
+  props.items.forEach((item, index) => (item.id = index + 1));
+addBreadCrumbItemId();
+
 const hasMoreItems = ref(
   (props.maxItems && props.items.length > props.maxItems) ||
     props.items.length > MAX_BREADCRUMBS,
@@ -43,7 +47,9 @@ const firstSet = computed(() => {
 
 const lastSet = computed(() => {
   if (props.itemsAfterCollapse) {
-    return props.items.slice(props.itemsAfterCollapse);
+    return props.items.slice(
+      Math.max(props.items.length - props.itemsAfterCollapse),
+    );
   }
   return new Array(props.items[props.items.length - 1]);
 });
@@ -55,16 +61,10 @@ provide('separator', separatorType.value);
   <nav>
     <menu class="flex gap-2">
       <template v-if="!hasMoreItems">
-        <Breadcrumb
-          v-for="(item, index) of items"
-          :key="item.text + index"
-          :item="item" />
+        <Breadcrumb v-for="item of items" :key="item.id" :item="item" />
       </template>
       <template v-else>
-        <Breadcrumb
-          v-for="(item, index) of firstSet"
-          :key="item.text + index"
-          :item="item" />
+        <Breadcrumb v-for="item of firstSet" :key="item.id" :item="item" />
         <li class="flex h-6 px-1 leading-6 border-box">
           <button
             class="text-light-neutral-700 hover:underline"
@@ -73,10 +73,7 @@ provide('separator', separatorType.value);
           </button>
         </li>
         <span class="text-light-neutral-700">{{ separatorType }}</span>
-        <Breadcrumb
-          v-for="(item, index) of lastSet"
-          :key="item.text + index"
-          :item="item" />
+        <Breadcrumb v-for="item of lastSet" :key="item.id" :item="item" />
       </template>
     </menu>
   </nav>
