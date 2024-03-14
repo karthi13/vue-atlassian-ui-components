@@ -1,0 +1,23 @@
+export type TAG_APPEARANCE = 'default' | 'rounded';
+export type TAG_COLOR =
+  | 'standard'
+  | 'blue'
+  | 'green'
+  | 'teal'
+  | 'purple'
+  | 'red'
+  | 'yellow'
+  | 'orange'
+  | 'magenta'
+  | 'lime'
+  | 'grey'
+  | 'greenLight'
+  | 'tealLight'
+  | 'blueLight'
+  | 'purpleLight'
+  | 'redLight'
+  | 'yellowLight'
+  | 'orangeLight'
+  | 'magentaLight'
+  | 'limeLight'
+  | 'greyLight';

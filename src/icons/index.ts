@@ -8,6 +8,7 @@ import Locked from './Locked.vue';
 import Anonymous from './Anonymous.vue';
 import Warning from './warning.vue';
 import Email from './Email.vue';
+import Cross from './Cross.vue';
 
 export {
   Anonymous,
@@ -20,4 +21,5 @@ export {
   Locked,
   Warning,
   Email,
+  Cross,
 };
